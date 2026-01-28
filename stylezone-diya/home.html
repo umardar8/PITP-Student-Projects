@@ -1,0 +1,262 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styleZone | Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+header h2 {
+    margin-bottom: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
+.home-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+/* MOBILE: zoom out image */
+@media (max-width: 768px) {
+    .home-hero {
+        object-fit: contain ;
+        height: 100%;
+       
+    }
+.home-hero img.hero-img {
+        width: 70%;
+        height: 100%;        /* image scales naturally */
+        object-fit: cover;   /* fill width fully, maintain aspect ratio */
+    }
+    .hero-overlay {
+        padding: 15px 10px;  /* smaller overlay padding */
+        border-radius: 2px;       /* smaller corners */
+        max-width: 70%;    
+    }
+
+    .hero-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+
+.hero-overlay {
+    background: rgba(1, 0, 0, 0.55);
+    padding: 15px 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* WHY CHOOSE US */
+section.bg-light h2 {
+    font-weight: bold;
+}
+
+section.bg-light h5 {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+section.bg-light p {
+    color: #555;
+}
+
+/* BEST SELLERS */
+.card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    display: black;
+    object-fit: contain;
+    
+}
+
+
+/* FOOTER */
+footer {
+    font-size: 14px;
+
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    
+    .hero-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="bg-dark text-white p-1 ">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+    <!-- <div class="container d-flex justify-content-between align-items-center"> -->
+        <h2>☯StyleZone</h2>
+        <nav class="d-flex flex-wrap">
+
+            <a href="home.html" class="text-white me-2 mb-1">Home</a>
+             <a href="About.html" class="text-white me-2 mb-1">About</a>
+            <a href="services.html" class="text-white me-2 mb-1 ">Services</a>
+            <a href="product.html" class="text-white me-2 mb-1">Products</a>
+            <a href="contact.html" class="text-white me-2 mb-1">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION (FEATURED PRODUCT) -->
+<section class="home-hero">
+     <img src="product_images/home11.jpg" alt="Hero Image" class="hero-img">
+    <div class="hero-overlay">
+        <h1 class="fs-5 fw-bold">New Season New Style</h1>
+        <p class="smaller">Discover the latest fashion trends at StyleZone</p>
+        <a href="product.html" class="btn btn-light btn-sm">Shop Now</a>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-3 bg-success text-center">
+    <div class="container">
+        <h2 class="mb-4"><b>Why Choose Us</b></h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h5><b>Premium Quality</b></h5>
+                <p>High-quality fabrics and durable materials for everyday comfort.</p>
+            </div>
+            <div class="col-md-4">
+                <h5><b>Affordable Prices</b></h5>
+                <p>Fashion that fits your style and your budget.</p>
+            </div>
+            <div class="col-md-4">
+                <h5><b>Fast Delivery</b></h5>
+                <p>Quick and reliable shipping to your doorstep.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BEST SELLERS GRID -->
+<section class="py-1">
+    <div class="container">
+        <h2 class="text-center mb-3"><b>Best Sellers</b></h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="product_images/shirt_1.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h6>Textured Shirt</h6>
+                        <p>Rs 1500</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="product_images/hoodie01.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h6>Classic Hoodie</h6>
+                        <p>Rs 2400</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="product_images/shoes1.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h6>Running Shoes</h6>
+                        <p>Rs 4000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="product_images/01.jpg" class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h6>Fashion Accessories</h6>
+                        <p>Rs 1200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+    2026 ☯styleZone. All Rights Reserved.
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+    border:border-box;
+    font-family: Arial, sans-arif;
+}
+.container{
+    height:100px;
+    background-color:rgb(44, 44, 139);
+    display:flex;
+    color:white;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+    background-image:url()
+}
